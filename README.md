@@ -5,8 +5,8 @@ A lightweight Yahoo Weather library for processing.
 Soon there will be the package.jar.
 
 Easy to use:
-Create a new .pde file and paste the content of Weather.java into it.
-After that, in the main .pde file use this:
+Create a new .pde file and paste the content of *Weather.java* into it.
+After that, in the main *.pde* file use this:
 
     Weather weather = new Weather();
 
