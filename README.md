@@ -14,7 +14,7 @@ For use the methods, do:
 
     weather.method();
     
-At the moment there's not a method to change the WOEID code, verrà implementato presto.
+At the moment there's not a method to change the WOEID code, will be implemented soon.
 You can get the code [here](http://woeid.rosselliot.co.nz/).
 
 
