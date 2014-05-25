@@ -1,4 +1,4 @@
-YahooWeatherProcessing
+Yahoo Weather Processing
 ======================
 
 A lightweight Yahoo Weather library for processing.
