@@ -18,6 +18,35 @@ At the moment there's not a method to change the WOEID code, will be implemented
 
 You can get the code [here](http://woeid.rosselliot.co.nz/).
 
+List of methods:
++ Weather()
++ String getCityName()
++ String getCountryName()
+
+*Today:*
++ String getWeatherCondition()
++ String getSunrise()
++ String getSunset()
++ float getPressure()
++ int getHumidity()
++ int getTemperature()
++ int getWeatherConditionCode()
+
+*Tomorrow:*
++ int getTemperatureLowTomorrow()
++ int getTemperatureHighTomorrow()
++ String getWeatherConditionTomorrow()
++ int getWeatherConditionCodeTomorrow()
++ getWeekdayTomorrow()
+
+*Day After Tomorrow:*
++ int getTemperatureLowDayAfterTomorrow()
++ int getTemperatureHighDayAfterTomorrow()
++ String getWeatherConditionDayAfterTomorrow()
++ int getWeatherConditionCodeDayAfterTomorrow()
++ getWeekdayDayAfterTomorrow()
+
+Here you can find the [Yahoo Weather API](https://developer.yahoo.com/weather/).
 
 ______________________________________________________________________________________________________________________
 
