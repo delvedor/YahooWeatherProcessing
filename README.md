@@ -8,7 +8,7 @@ Easy to use:
 Create a new .pde file and paste the content of *Weather.java* into it.
 After that, in the main *.pde* file use this:
 
-    Weather weather = new Weather();
+    Weather weather = new Weather(code);
 
 For use the methods, do:
 
