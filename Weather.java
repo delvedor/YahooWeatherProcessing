@@ -1,10 +1,16 @@
+/*
+ * Project: Yahoo Weather for Processing
+ * Author: delvedor
+ * GitHub: https://github.com/delvedor
+ */
+
 class Weather {
-  
+
   private XML root;
   private XML channel;
 
-  public Weather() {
-    root = loadXML("http://weather.yahooapis.com/forecastrss?w=725383&u=c");
+  public Weather(int code) {
+    root = loadXML("http://weather.yahooapis.com/forecastrss?w="+code+"&u=c");
     channel = root.getChild("channel");
   }
   
