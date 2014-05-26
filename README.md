@@ -37,14 +37,14 @@ List of methods:
 + int getTemperatureHighTomorrow()
 + String getWeatherConditionTomorrow()
 + int getWeatherConditionCodeTomorrow()
-+ getWeekdayTomorrow()
++ String getWeekdayTomorrow()
 
 *Day After Tomorrow:*
 + int getTemperatureLowDayAfterTomorrow()
 + int getTemperatureHighDayAfterTomorrow()
 + String getWeatherConditionDayAfterTomorrow()
 + int getWeatherConditionCodeDayAfterTomorrow()
-+ getWeekdayDayAfterTomorrow()
++ String getWeekdayDayAfterTomorrow()
 
 Here you can find the [Yahoo Weather API](https://developer.yahoo.com/weather/).
 
