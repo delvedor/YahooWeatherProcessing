@@ -1,0 +1,37 @@
+<rss xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" version="2.0">
+	<channel>
+		<title>No internet connection.</title>
+		<link>none</link>
+		<description>none</description>
+		<language>en-us</language>
+		<lastBuildDate>none</lastBuildDate>
+		<ttl>60</ttl>
+		<yweather:location city="No internet connection" country="" region=""/>
+		<yweather:units distance="none" pressure="none" speed="none" temperature="none"/>
+		<yweather:wind chill="none" direction="none" speed="none"/>
+		<yweather:atmosphere humidity="0" pressure="0" rising="none" visibility="none"/>
+		<yweather:astronomy sunrise="none" sunset="none"/>
+		<image>
+			<title>Yahoo! Weather</title>
+			<width>142</width>
+			<height>18</height>
+			<link>http://weather.yahoo.com</link>
+			<url>none</url>
+		</image>
+		<item>
+			<title>none</title>
+			<geo:lat>none</geo:lat>
+			<geo:long>none</geo:long>
+			<link>none</link>
+			<pubDate>none</pubDate>
+			<yweather:condition code="3200" date="none" temp="0" text=""/>
+			<description>none</description>
+			<yweather:forecast code="3200" date="none" day="none" high="0" low="0" text="none"/>
+			<yweather:forecast code="3200" date="none" day="none" high="0" low="0" text="none"/>
+			<yweather:forecast code="3200" date="none" day="none" high="0" low="0" text="none"/>
+			<yweather:forecast code="3200" date="none" day="none" high="0" low="0" text="none"/>
+			<yweather:forecast code="3200" date="none" day="none" high="0" low="0" text="none"/>
+			<guid isPermaLink="false">none</guid>
+		</item>
+	</channel>
+</rss>
