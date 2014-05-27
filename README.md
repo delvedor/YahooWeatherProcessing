@@ -21,7 +21,7 @@ You can get the code [here](http://woeid.rosselliot.co.nz/).
 If there's not internet connection the library load automatically the *error.xml* file, who is a copy without data of the Yahoo Weather XML .
 
 List of methods:
-* General*
+*General methods:*
 + Weather(int code, String tempUnit)
 + boolean checkConnection()
 + void update()
