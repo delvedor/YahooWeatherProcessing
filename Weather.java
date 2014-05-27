@@ -1,17 +1,46 @@
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 /*
  * Project: Yahoo Weather for Processing
  * Author: delvedor
  * GitHub: https://github.com/delvedor
+ * License: GNU GPLv2
  */
 
 class Weather {
 
   private XML root;
   private XML channel;
+  private boolean reachable;
 
-  public Weather(int code) {
-    root = loadXML("http://weather.yahooapis.com/forecastrss?w="+code+"&u=c");
+  public Weather(int code, String tempUnit) {
+    reachable = checkConnection("http://weather.yahooapis.com", 5000);
+    
+    if (reachable) {
+      root = loadXML("http://weather.yahooapis.com/forecastrss?w="+code+"&u="+tempUnit);
+    } else {
+      root = loadXML("error.xml");
+    }
+    
     channel = root.getChild("channel");
+  }
+  
+  /*
+   * Check if the called host is available.
+   */
+  public boolean checkConnection(String url, int timeout) {
+    url = url.replaceFirst("https", "http"); // Otherwise an exception may be thrown on invalid SSL certificates.
+    try {
+      HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
+      connection.setConnectTimeout(timeout);
+      connection.setReadTimeout(timeout);
+      connection.setRequestMethod("HEAD");
+      int responseCode = connection.getResponseCode();
+      return (200 <= responseCode && responseCode <= 399);
+    } catch (IOException exception) {
+      return false;
+    }
   }
   
   /*
