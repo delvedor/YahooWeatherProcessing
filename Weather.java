@@ -1,5 +1,6 @@
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Date;
 
 /*
  *
@@ -16,10 +17,14 @@ class Weather {
   private XML root;
   private XML channel;
   private boolean reachable;
+  private int code;
+  private String tempUnit;
   private final static String  URL = "https://weather.yahooapis.com";
   private final static int TIMEOUT = 5000;
 
   public Weather(int code, String tempUnit) {
+    this.code = code;
+    this.tempUnit = tempUnit;
     reachable = checkConnection();
     
     if (reachable) {
@@ -32,7 +37,7 @@ class Weather {
   }
   
   /*
-   * Check if the called host is available.
+   * General methods
    */
   public boolean checkConnection() {
     try {
@@ -47,8 +52,25 @@ class Weather {
     }
   }
   
+  public void update() {
+    reachable = checkConnection();
+    
+    if (reachable) {
+      root = loadXML("http://weather.yahooapis.com/forecastrss?w="+code+"&u="+tempUnit);
+    } else {
+      root = loadXML("error.xml");
+    }
+    
+    channel = root.getChild("channel");
+  }
+  
+  public String lastUpdate(){
+    Date date = new Date();
+    return date.toString();
+  }
+
   /*
-   * Current Day
+   * Today
    */
   public String getCityName() {
     return channel.getChild("yweather:location").getString("city");

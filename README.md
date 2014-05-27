@@ -21,12 +21,15 @@ You can get the code [here](http://woeid.rosselliot.co.nz/).
 If there's not internet connection the library load automatically the *error.xml* file, who is a copy without data of the Yahoo Weather XML .
 
 List of methods:
+* General*
 + Weather(int code, String tempUnit)
 + boolean checkConnection()
-+ String getCityName()
-+ String getCountryName()
++ void update()
++ String lastUpdate()
 
 *Today:*
++ String getCityName()
++ String getCountryName()
 + String getWeatherCondition()
 + String getSunrise()
 + String getSunset()
