@@ -16,9 +16,11 @@ class Weather {
   private XML root;
   private XML channel;
   private boolean reachable;
+  private final static String  URL = "https://weather.yahooapis.com";
+  private final static int TIMEOUT = 5000;
 
   public Weather(int code, String tempUnit) {
-    reachable = checkConnection("http://weather.yahooapis.com", 5000);
+    reachable = checkConnection();
     
     if (reachable) {
       root = loadXML("http://weather.yahooapis.com/forecastrss?w="+code+"&u="+tempUnit);
@@ -32,12 +34,11 @@ class Weather {
   /*
    * Check if the called host is available.
    */
-  public boolean checkConnection(String url, int timeout) {
-    url = url.replaceFirst("https", "http"); // Otherwise an exception may be thrown on invalid SSL certificates.
+  public boolean checkConnection() {
     try {
-      HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
-      connection.setConnectTimeout(timeout);
-      connection.setReadTimeout(timeout);
+      HttpURLConnection connection = (HttpURLConnection) new URL(URL).openConnection();
+      connection.setConnectTimeout(TIMEOUT);
+      connection.setReadTimeout(TIMEOUT);
       connection.setRequestMethod("HEAD");
       int responseCode = connection.getResponseCode();
       return (200 <= responseCode && responseCode <= 399);

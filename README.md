@@ -22,7 +22,7 @@ If there's not internet connection the library load automatically the *error.xml
 
 List of methods:
 + Weather(int code, String tempUnit)
-+ boolean checkConnection(String url, int timeout)
++ boolean checkConnection()
 + String getCityName()
 + String getCountryName()
 
