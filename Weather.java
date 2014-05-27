@@ -2,10 +2,13 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /*
+ *
  * Project: Yahoo Weather for Processing
  * Author: delvedor
- * GitHub: https://github.com/delvedor
+ * Twitter: @delvedor
  * License: GNU GPLv2
+ * GitHub: https://github.com/delvedor/YahooWeatherProcessing
+ *
  */
 
 class Weather {
