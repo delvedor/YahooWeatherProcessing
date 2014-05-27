@@ -18,10 +18,11 @@ At the moment there's not a method to change the WOEID code, will be implemented
 
 You can get the code [here](http://woeid.rosselliot.co.nz/).
 
-If there's not internet connection the library load automatically the error.xml file, who is a copy without data of the Yahoo Weather XML .
+If there's not internet connection the library load automatically the *error.xml* file, who is a copy without data of the Yahoo Weather XML .
 
 List of methods:
-+ Weather()
++ Weather(int code, String tempUnit)
++ boolean checkConnection(String url, int timeout)
 + String getCityName()
 + String getCountryName()
 
