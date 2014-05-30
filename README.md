@@ -38,6 +38,9 @@ List of methods:
 + int getHumidity()
 + int getTemperature()
 + int getWeatherConditionCode()
++ int getTemperatureLow()
++ int getTemperatureHigh()
++ String getWeekday()
 
 *Tomorrow:*
 + int getTemperatureLowTomorrow()
