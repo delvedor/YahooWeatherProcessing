@@ -108,6 +108,18 @@ class Weather {
     return channel.getChild("item").getChild("yweather:condition").getInt("code");
   }
   
+  public int getTemperatureLow() {
+    return channel.getChild("item").getChild(15).getInt("low");
+  }
+  
+  public int getTemperatureHigh() {
+    return channel.getChild("item").getChild(15).getInt("high");
+  }
+  
+  public String getWeekday() {
+    return channel.getChild("item").getChild(15).getString("day");
+  }
+  
   /*
    * Tomorrow
    */
